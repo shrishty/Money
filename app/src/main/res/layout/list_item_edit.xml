@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Priya"
-        android:id="@+id/tvname"
+        android:id="@+id/tvName"
         android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
 
     <TextView
@@ -21,10 +21,18 @@
         android:id="@+id/tvAmount"
         android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="More to add or sub"
+        android:id="@+id/etAmountToBeAddedOrSubtracted"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
+
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sbChooseAmount"
+        android:max="10000"
         android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
 
     <RadioGroup
@@ -43,6 +51,12 @@
             android:layout_height="wrap_content"
             android:text="Give"
             android:id="@+id/rbGive" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nothing to Take or Give"
+            android:id="@+id/rbDone" />
 
     </RadioGroup>
 

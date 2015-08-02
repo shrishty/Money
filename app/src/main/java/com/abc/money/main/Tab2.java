@@ -11,8 +11,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Created by shrishty on 7/19/15.
@@ -53,6 +55,23 @@ public class Tab2 extends Fragment {
         }
         cursor.close();
         sqLiteDatabase.close();
+
+        lview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String name = ((TextView) view.findViewById(R.id.tvName)).getText().toString();
+                String amount = ((TextView) view.findViewById(R.id.tvAmount)).getText().toString();
+
+                ListOnClickFragment frag = new ListOnClickFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("name", name);
+                bundle.putString("amount", amount);
+                frag.setArguments(bundle);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.add(R.id.main_activity, frag, "frag-1").addToBackStack("tag1");
+                transaction.commit();
+            }
+        });
 
 
         btnAddMore = (Button) v.findViewById(R.id.btnAddMoreToTake);
