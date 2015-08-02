@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/name"
+        android:ems="10"
+        android:id="@+id/etName"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:hint="@string/amount"
+        android:id="@+id/etAmount"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take"
+            android:id="@+id/rbTake"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Give"
+            android:id="@+id/rbGive"
+            />
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:textColor="@color/switch_thumb_normal_material_light"
+        android:background="@color/tabsScrollColor"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"
+        android:id="@+id/btnAddMore" />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Priya"
+        android:id="@+id/tvname"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rs. 0"
+        android:id="@+id/tvAmount"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sbChooseAmount"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take"
+            android:id="@+id/rbTake" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Give"
+            android:id="@+id/rbGive" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/btnUpdate"
+        android:textColor="@color/switch_thumb_normal_material_light"
+        android:background="@color/tabsScrollColor"
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"
+         />
+</LinearLayout>
